@@ -1,41 +1,11 @@
 [env]
 TERM = "xterm-256color"
 
-# Colors (Terminal.app)
-
 [colors]
 draw_bold_text_with_bright_colors = true
 
-# # Kanagawa Alacritty Colors
-# [colors.primary]
-# background = '0x1f1f28'
-# foreground = '0xdcd7ba'
-#
-# [colors.normal]
-# black =   '0x090618'
-# red =     '0xc34043'
-# green =   '0x76946a'
-# yellow =  '0xc0a36e'
-# blue =    '0x7e9cd8'
-# magenta = '0x957fb8'
-# cyan =    '0x6a9589'
-# white =   '0xc8c093'
-#
-# [colors.bright]
-# black =   '0x727169'
-# red =     '0xe82424'
-# green =   '0x98bb6c'
-# yellow =  '0xe6c384'
-# blue =    '0x7fb4ca'
-# magenta = '0x938aa9'
-# cyan =    '0x7aa89f'
-# white =   '0xdcd7ba'
-#
-# [colors.selection]
-# background = '0x2d4f67'
-# foreground = '0xc8c093'
+## TokyoNight Alacritty Colors
 
-# TokyoNight Alacritty Colors
 # Default colors
 [colors.primary]
 background = '#1a1b26'
@@ -72,37 +42,7 @@ color = '#ff9e64'
 index = 17
 color = '#db4b4b'
 
-# [colors.indexed_colors]
-# - { index: 16, color: '0xffa066' }
-# - { index: 17, color: '0xff5d62' }
-
-# # Default colors
-# [colors.primary]
-# background = '#000000'
-# foreground = '#ffffff'
-#
-# # Normal colors
-# [colors.normal]
-# black   = '#000000'
-# red     = '#990000'
-# green   = '#00a600'
-# yellow  = '#999900'
-# blue    = '#0000b2'
-# magenta = '#b200b2'
-# cyan    = '#00a6b2'
-# white   = '#bfbfbf'
-#
-# # Bright colors
-# [colors.bright]
-# black   = '#666666'
-# red     = '#e50000'
-# green   = '#00d900'
-# yellow  = '#e5e500'
-# blue    = '#0000ff'
-# magenta = '#e500e5'
-# cyan    = '#00e5e5'
-# white   = '#e5e5e5'
-#
+## Font configuration
 [font]
 size = 16.0
 
@@ -128,9 +68,6 @@ action = "Copy"
 key = "C"
 mods = "Alt"
 
-[scrolling]
-history = 10000
-
 [window]
 decorations = "full"
-startup_mode = "Windowed"
+startup_mode = "Maximized"
