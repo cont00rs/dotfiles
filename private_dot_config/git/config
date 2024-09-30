@@ -1,0 +1,12 @@
+[user]
+        name = cont00rs
+        email = cont00rs@users.noreply.github.com
+# Overwrite (some) configuration for some directories only.
+#[includeIf "gitdir:~/code/**"]
+#        path = ~/.config/git/alternative
+[core]
+        editor = nvim
+[init]
+        defaultBranch = main
+[pull]
+        rebase = true
