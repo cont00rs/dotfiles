@@ -7,6 +7,12 @@ return {
         config = function()
             require("tokyonight").setup({
                 style = "night",
+                styles = {
+                    comments = { italic = false },
+                    keywords = { italic = false },
+                    functions = { italic = false },
+                    variables = { italic = false },
+                }
             })
             vim.cmd("colorscheme tokyonight")
             vim.cmd("echo \" \"")
