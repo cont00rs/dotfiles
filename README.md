@@ -10,4 +10,5 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply cont00rs
 
 Not yet managed through `chezmoi`:
 
-- [fzf-git](https://github.com/junegunn/fzf-git.sh)
+- Fuzzy finder: [fzf-git](https://github.com/junegunn/fzf-git.sh)
+- Font: [Commit Mono](https://commitmono.com)
