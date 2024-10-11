@@ -1,5 +1,5 @@
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /opt/homebrew/etc/profile.d/bash_completion.sh
+source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
 
 # Environment variable configuration.
 export CLICOLOR=1
@@ -23,10 +23,6 @@ alias grep="grep --color"
 
 alias vim='nvim'
 
-# Enable fzf integration for Bash and fzf-git support.
-eval "$(fzf --bash)"
-source ~/.local/bin/fzf-git.sh
-
 # Set JuliaUP and LLVM paths
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.juliaup/bin
@@ -37,3 +33,7 @@ test -f "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 
 # Enable GHCUP environment.
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env"
+
+# Enable fzf integration for Bash and fzf-git support.
+eval "$(fzf --bash)"
+source ~/.local/bin/fzf-git.sh
