@@ -6,7 +6,7 @@ return {
             require("conform").setup({
                 formatters_by_ft = {
                     rust = { "rustfmt", lsp_format = "fallback" },
-                    python = { "ruff" },
+                    python = { "ruff_format" },
                 },
 
                 format_on_save = {
