@@ -10,4 +10,5 @@ mkdir -p ~/.config/git
 
 ln -s $(pwd)/config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -s $(pwd)/config/git/config ~/.config/git/config
+ln -sv $(pwd)/config/starship.toml  ~/.config/
 ln -s $(pwd)/config/nvim ~/.config/nvim
