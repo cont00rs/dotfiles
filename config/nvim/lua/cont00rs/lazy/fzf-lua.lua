@@ -7,13 +7,19 @@ return {
     },
 
     config = function()
-        require("fzf-lua").setup({'max-perf',
+        require("fzf-lua").setup({
+            'max-perf',
             winopts = {
                 split = 'belowright new',
                 border = false,
                 preview = {
                     hidden = 'hidden',
                 },
+            },
+            keymap = {
+                fzf = {
+                    ["ctrl-q"] = "select-all+accept",
+                }
             },
         })
     end,
