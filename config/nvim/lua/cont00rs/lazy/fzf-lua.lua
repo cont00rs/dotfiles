@@ -14,6 +14,7 @@ return {
                 border = false,
                 preview = {
                     hidden = 'hidden',
+                    layout = 'horizontal',
                 },
             },
             keymap = {
