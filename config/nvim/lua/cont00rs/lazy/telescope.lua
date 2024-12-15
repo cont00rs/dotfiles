@@ -13,16 +13,17 @@ return {
         vim.keymap.set('n', '<leader>fg', function() builtin.live_grep(ivy) end)
         vim.keymap.set('n', '<leader>fq', function() builtin.quickfix(ivy) end)
         vim.keymap.set('n', '<leader>gs', function() builtin.git_status(ivy) end)
+
+        local actions = require("telescope.actions")
+        require("telescope").setup({
+            defaults = {
+                mappings = {
+                    i = {
+                        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                        ["<C-Q>"] = actions.send_selected_to_qflist + actions.open_qflist
+                    }
+                }
+            }
+        })
     end
-
-    -- require('telescope').setup({
-    --     local builtin = require("telescope.builtin")
-    -- })
-
-
-    --     local builtin = require('telescope.builtin')
-    -- vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-    -- vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-    -- vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-    -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 }
