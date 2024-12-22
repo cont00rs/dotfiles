@@ -1,7 +1,7 @@
 return {
     'saghen/blink.cmp',
     lazy = false,
-    version = 'v0.7.6',
+    version = 'v0.8.1',
 
     opts = {
         keymap = {
@@ -14,11 +14,9 @@ return {
         },
 
         sources = {
-            completion = {
-                enabled_providers = { 'lsp', 'path', 'buffer' },
-            },
+            default = { 'lsp', 'path', 'buffer' },
         },
     },
 
-    opts_extend = { "sources.completion.enabled_providers" }
+    opts_extend = { "sources.default" }
 }
