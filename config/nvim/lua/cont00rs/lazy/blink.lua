@@ -1,11 +1,19 @@
 return {
     'saghen/blink.cmp',
     lazy = false,
-    version = 'v0.8.1',
+    version = 'v0.8.2',
 
     opts = {
         keymap = {
             preset = 'default'
+        },
+
+        completion = {
+            accept = {
+                auto_brackets = {
+                    enabled = false
+                },
+            },
         },
 
         appearance = {
@@ -15,6 +23,7 @@ return {
 
         sources = {
             default = { 'lsp', 'path', 'buffer' },
+            cmdline = {},
         },
     },
 
