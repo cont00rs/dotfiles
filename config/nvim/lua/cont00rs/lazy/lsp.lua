@@ -35,15 +35,5 @@ return {
             config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
             lspconfig[server].setup(config)
         end
-
-        vim.diagnostic.config({
-            float = {
-                focusable = false,
-                style = "minimal",
-                source = "always",
-                header = "",
-                prefix = "",
-            },
-        })
     end
 }
