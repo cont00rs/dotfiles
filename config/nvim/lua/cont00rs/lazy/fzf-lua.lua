@@ -20,6 +20,7 @@ return {
 
     keys = {
         { "<leader>ff", "<cmd>FzfLua files<CR>" },
+        { "<leader>fb", "<cmd>FzfLua buffers<CR>" },
         { "<leader>fg", "<cmd>FzfLua live_grep<CR>" },
         { "<leader>fq", "<cmd>FzfLua quickfix<CR>" },
     }
