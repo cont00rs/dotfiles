@@ -4,58 +4,99 @@ TERM = "xterm-256color"
 [colors]
 draw_bold_text_with_bright_colors = true
 
-## TokyoNight Alacritty Colors
+# Neovim default theme inspired colors
+# https://github.com/nshern/neovim-default-colorscheme-extras
 
-# Default colors
 [colors.primary]
-background = '#1a1b26'
-foreground = '#c0caf5'
+background = "#14161b"
+foreground = "#E0E2EA"
+dim_foreground = "#C4C6CD"
+bright_foreground = "#E0E2EA"
 
-# Normal colors
+[colors.cursor]
+text = "#14161b"
+cursor = "#E0E2EA"
+
+[colors.vi_mode_cursor]
+text = "#14161b"
+cursor = "#E0E2EA"
+
+[colors.search.matches]
+foreground = "#14161b"
+background = "#4f5258"
+
+[colors.search.focused_match]
+foreground = "#14161b"
+background = "#7EDFDE"
+
+[colors.footer_bar]
+foreground = "#14161b"
+background = "#7EDFDE"
+
+[colors.hints.start]
+foreground = "#14161b"
+background = "#E5ADB9"
+
+[colors.hints.end]
+foreground = "#14161b"
+background = "#7EDFDE"
+
+[colors.selection]
+text = "#E0E2EA"
+background = "#4f5258"
+
 [colors.normal]
-black = '#15161e'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#bb9af7'
-cyan = '#7dcfff'
-white = '#a9b1d6'
+black = "#2c2e33"
+red = "#E5ADB9"
+green = "#A2DFC0"
+yellow = "#E3CA85"
+blue = "#95C5E5"
+magenta = "#E5B6E6"
+cyan = "#7EDFDE"
+white = "#C4C6CD"
 
-# Bright colors
 [colors.bright]
-black = '#414868'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#bb9af7'
-cyan = '#7dcfff'
-white = '#c0caf5'
+black = "#4f5258"
+red = "#FFC0B9"
+green = "#B4F6C0"
+yellow = "#FCE094"
+blue = "#A6DBFF"
+magenta = "#FFCAFF"
+cyan = "#8CF8F7"
+white = "#9b9ea4"
 
-# Indexed Colors
+[colors.dim]
+black = "#2c2e33"
+red = "#E5ADB9"
+green = "#A2DFC0"
+yellow = "#E3CA85"
+blue = "#95C5E5"
+magenta = "#E5B6E6"
+cyan = "#7EDFDE"
+white = "#C4C6CD"
+
 [[colors.indexed_colors]]
 index = 16
-color = '#ff9e64'
+color = "#7EDFDE"
 
 [[colors.indexed_colors]]
 index = 17
-color = '#db4b4b'
+color = "#4f5258"
 
 ## Font configuration
 [font]
-size = 16.0
+size = 13.0
 
 [font.bold]
-family = "CommitMono"
+family = "JetBrains Mono NL"
 style = "Bold"
 
 [font.italic]
-family = "CommitMono"
+family = "JetBrains Mono NL"
 style = "Italic"
 
 [font.normal]
-family = "CommitMono"
+family = "JetBrains Mono NL"
 style = "Regular"
 
 [[keyboard.bindings]]
