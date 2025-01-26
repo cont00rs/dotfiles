@@ -74,3 +74,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     end
 })
+
+-- Enable spell checking for certain files.
+local _ = vim.api.nvim_create_augroup("Spellcheck", { clear = true })
+
+local spell_types = { "text", "plaintex", "typst", "gitcommit", "markdown" }
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    group = "Spellcheck",
+    pattern = spell_types,
+    callback = function()
+        vim.opt_local.spell = true
+    end
+})
