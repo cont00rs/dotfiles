@@ -13,5 +13,22 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     spec = "cont00rs.lazy",
-    change_detection = { notify = false }
+    change_detection = { notify = false },
+    ui = {
+        icons = {
+            cmd = "⌘",
+            config = "🛠",
+            event = "📅",
+            ft = "📂",
+            init = "⚙",
+            keys = "🗝",
+            plugin = "🔌",
+            runtime = "💻",
+            require = "🌙",
+            source = "📄",
+            start = "🚀",
+            task = "📌",
+            lazy = "💤 ",
+        }
+    },
 })
