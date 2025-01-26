@@ -16,9 +16,25 @@ vim.opt.undofile = true
 
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.cursorline = true
-
 vim.opt.scrolloff = 5
+
+vim.opt.termguicolors = false
+vim.cmd("colorscheme vim")
+vim.cmd("highlight Comment ctermfg=green")
+vim.cmd("highlight clear SignColumn")
+vim.cmd("highlight clear Pmenu")
+vim.cmd("highlight clear PmenuSel")
+vim.cmd("highlight Pmenu ctermbg=black")
+vim.cmd("highlight PmenuSel ctermfg=black ctermbg=darkgreen")
+
+-- A slight highlight on the current line.
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "screenline"
+vim.cmd("highlight CursorLine cterm=NONE ctermbg=black")
+
+-- Show spelling mistakes through undercurl.
+vim.cmd("highlight SpellBad cterm=undercurl ctermfg=NONE ctermbg=NONE")
+vim.cmd("highlight SpellCap cterm=undercurl ctermfg=NONE ctermbg=NONE")
 
 -- These seem no longer needed.
 vim.api.nvim_create_autocmd("FileType", {
