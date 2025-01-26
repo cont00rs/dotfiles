@@ -1,12 +1,14 @@
 return {
     'saghen/blink.cmp',
     lazy = false,
-    version = 'v0.10.0',
+    version = 'v0.11.0',
 
 
     opts = {
         keymap = {
-            preset = 'default'
+            preset = 'default',
+
+            ['<C-y>'] = { 'show', 'accept' },
         },
 
         completion = {
@@ -17,8 +19,21 @@ return {
             },
 
             ghost_text = {
-                enabled = true
+                enabled = false
             },
+
+            menu = {
+                draw = {
+                    columns = {
+                        { "label", "label_description", gap = 1 }, { "kind" }
+                    }
+                }
+            },
+
+            trigger = {
+                show_on_keyword = false,
+                show_on_trigger_character = false,
+            }
         },
 
         appearance = {
@@ -32,7 +47,7 @@ return {
         },
 
         signature = {
-            enabled = true
+            enabled = false
         }
     },
 
