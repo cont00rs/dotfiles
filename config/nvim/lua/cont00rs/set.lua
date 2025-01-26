@@ -19,22 +19,26 @@ vim.opt.number = true
 vim.opt.scrolloff = 5
 
 vim.opt.termguicolors = false
-vim.cmd("colorscheme vim")
-vim.cmd("highlight Comment ctermfg=green")
-vim.cmd("highlight clear SignColumn")
-vim.cmd("highlight clear Pmenu")
-vim.cmd("highlight clear PmenuSel")
-vim.cmd("highlight Pmenu ctermbg=black")
-vim.cmd("highlight PmenuSel ctermfg=black ctermbg=darkgreen")
+vim.api.nvim_command("colorscheme vim")
 
--- A slight highlight on the current line.
+-- The SignColumn can just be black.
+vim.api.nvim_set_hl(0, "SignColumn", {})
+
+-- Make code comments stand out more.
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = "green" })
+
+-- Change the use of pink colors in Popup menus.
+vim.api.nvim_set_hl(0, "Pmenu", { ctermbg = "black" })
+vim.api.nvim_set_hl(0, "PmenuSel", { ctermfg = "black", ctermbg = "darkgreen" })
+
+-- Only a slight highlight on the current line.
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "screenline"
-vim.cmd("highlight CursorLine cterm=NONE ctermbg=black")
+vim.api.nvim_set_hl(0, "CursorLine", { ctermbg = "black" })
 
 -- Show spelling mistakes through undercurl.
-vim.cmd("highlight SpellBad cterm=undercurl ctermfg=NONE ctermbg=NONE")
-vim.cmd("highlight SpellCap cterm=undercurl ctermfg=NONE ctermbg=NONE")
+vim.api.nvim_set_hl(0, "SpellBad", { sp = "red", undercurl = true })
+vim.api.nvim_set_hl(0, "SpellCap", { sp = "blue", undercurl = true })
 
 -- These seem no longer needed.
 vim.api.nvim_create_autocmd("FileType", {
