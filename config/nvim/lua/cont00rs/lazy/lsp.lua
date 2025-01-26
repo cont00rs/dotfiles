@@ -20,7 +20,9 @@ return {
 
         })
 
-        require("lspconfig").rust_analyzer.setup({
+        local lspconfig = require("lspconfig")
+
+        lspconfig.rust_analyzer.setup({
             settings = {
                 ["rust_analyzer"] = {
                     cargo = {
@@ -30,7 +32,28 @@ return {
             }
         })
 
-        local lspconfig = require('lspconfig')
+        lspconfig.lua_ls.setup({
+            settings = {
+                Lua = {
+                    runtime = {
+                        verison = 'LuaJIT',
+                    },
+                    diagnostics = {
+                        globals = {
+                            "require",
+                            "vim",
+                        },
+                    },
+                    telementary = {
+                        enable = false,
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                },
+            }
+        })
+
         for server, config in pairs(opts.servers or {}) do
             config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
             lspconfig[server].setup(config)
