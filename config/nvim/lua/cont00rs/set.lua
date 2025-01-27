@@ -107,3 +107,21 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         vim.opt_local.spell = true
     end
 })
+
+-- Enable soft wrap with indentation for Markdown
+local _ = vim.api.nvim_create_augroup("CustomSoftWrap", { clear = true })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    group = "CustomSoftWrap",
+    pattern = { "markdown" },
+    callback = function()
+        vim.opt_local.wrap = true
+        vim.opt_local.breakindent = true
+        vim.opt_local.breakindentopt = "shift:2"
+        vim.opt_local.linebreak = true
+        vim.opt_local.splitright = true
+        local opts = { expr = true, silent = true, buffer = true, }
+        vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", opts)
+        vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", opts)
+    end
+})

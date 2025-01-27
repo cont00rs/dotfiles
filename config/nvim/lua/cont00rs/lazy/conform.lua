@@ -17,7 +17,7 @@ return {
             })
 
             require("conform").formatters.mdformat = {
-                prepend_args = { "--wrap", "72" },
+                -- prepend_args = { "--wrap", "72" },
             }
         end
     }
