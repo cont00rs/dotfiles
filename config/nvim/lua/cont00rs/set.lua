@@ -47,6 +47,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.opt.path:append("**")
 
+-- Configure default fuzzy search by not expanding the completion
+-- and enabling fuzzy matching for suggestions.
+vim.opt.completeopt = "menu,preview,noinsert,fuzzy"
+
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = "*.o,*.swp,*.mod"
 
