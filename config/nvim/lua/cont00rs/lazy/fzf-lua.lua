@@ -21,7 +21,14 @@ return {
             grep = {
                 rg_opts =
                 "--hidden -g '!.git' --column --line-number --no-heading --color=always --smart-case --max-columns=4096 -e",
-            }
+            },
+            previewers = {
+                builtin = {
+                    treesitter = {
+                        enabled = false,
+                    },
+                },
+            },
         })
     end,
 
