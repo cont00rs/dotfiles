@@ -4,36 +4,66 @@ TERM = "xterm-256color"
 [colors]
 draw_bold_text_with_bright_colors = true
 
+# neobones
+
+[colors.bright]
+black = "#263945"
+red = "#E8838F"
+green = "#A0FF85"
+yellow = "#D68C67"
+blue = "#92A0E2"
+magenta = "#CF86C1"
+cyan = "#65B8C1"
+white = "#98A39E"
+
+[colors.cursor]
+cursor = "#CEDDD7"
+text = "#0F191F"
+
+[colors.normal]
+black = "#0F191F"
+blue = "#8190D4"
+cyan = "#66A5AD"
+green = "#90FF6B"
+magenta = "#B279A7"
+red = "#DE6E7C"
+white = "#C6D5CF"
+yellow = "#B77E64"
+
+[colors.primary]
+background = "#0F191F"
+foreground = "#C6D5CF"
+
 # The classic Terminal look.
 # https://github.com/alacritty/alacritty-theme/blob/master/themes/terminal_app.toml
 
-# Default colors
-[colors.primary]
-background = '#000000'
-foreground = '#b6b6b6'
-
-# Normal colors
-[colors.normal]
-black   = '#000000'
-red     = '#990000'
-green   = '#00a600'
-yellow  = '#999900'
-blue    = '#0000b2'
-magenta = '#b200b2'
-cyan    = '#00a6b2'
-white   = '#bfbfbf'
-
-# Bright colors
-[colors.bright]
-black   = '#666666'
-red     = '#e50000'
-green   = '#00d900'
-yellow  = '#e5e500'
-blue    = '#0000ff'
-magenta = '#e500e5'
-cyan    = '#00e5e5'
-white   = '#e5e5e5'
-
+# # Default colors
+# [colors.primary]
+# background = '#000000'
+# foreground = '#b6b6b6'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#000000'
+# red     = '#990000'
+# green   = '#00a600'
+# yellow  = '#999900'
+# blue    = '#0000b2'
+# magenta = '#b200b2'
+# cyan    = '#00a6b2'
+# white   = '#bfbfbf'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#666666'
+# red     = '#e50000'
+# green   = '#00d900'
+# yellow  = '#e5e500'
+# blue    = '#0000ff'
+# magenta = '#e500e5'
+# cyan    = '#00e5e5'
+# white   = '#e5e5e5'
+#
 # Neovim colours for terminal below.
 
 # [colors.cursor]
