@@ -10,6 +10,9 @@ return {
         require("fzf-lua").setup({
             'default-title',
 
+            -- Inherit colors to match neovim.
+            fzf_colors = true,
+
             keymap = {
                 fzf = {
                     ["ctrl-q"] = "select-all+accept",
