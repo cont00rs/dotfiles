@@ -60,7 +60,7 @@ return {
 
         config = function()
             vim.g.neobones = {
-                darkness = "stark",
+                darkness = nil,
                 italic_comments = false,
             }
             vim.cmd.colorscheme('neobones')
