@@ -10,7 +10,11 @@ return {
                 enabled = true,
                 animate = { enabled = false },
                 scope = { enabled = false },
-            }
+            },
+            -- Use right side of statuscolumn for git signs.
+            statuscolumn = {
+                enabled = true,
+            },
         }
     }
 }
