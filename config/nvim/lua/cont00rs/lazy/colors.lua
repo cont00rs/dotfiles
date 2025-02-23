@@ -12,6 +12,10 @@ return {
                     blink_cmp = true,
                     treesitter = true,
                     diffview = true,
+                    snacks = {
+                        enabled = true,
+                        indent_scope_color = "",
+                    }
                 }
             })
 
