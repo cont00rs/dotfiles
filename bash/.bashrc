@@ -37,3 +37,4 @@ test -f "$HOME/.cargo/env" && source "$HOME/.cargo/env"
 # Enable fzf integration for Bash and fzf-git support.
 eval "$(fzf --bash)"
 source ~/.local/bin/fzf-git.sh
+export FZF_DEFAULT_OPTS='--color=light'
