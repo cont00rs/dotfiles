@@ -1,7 +1,7 @@
 return {
     'saghen/blink.cmp',
     lazy = false,
-    version = 'v0.11.0',
+    version = 'v0.12.4',
 
 
     opts = {
@@ -24,23 +24,20 @@ return {
 
             menu = {
                 scrollbar = false,
-                border = 'none',
-                draw = {
-                    columns = {
-                        { "label", "label_description", gap = 1 }, { "kind" }
-                    }
-                }
             },
         },
 
         appearance = {
-            use_nvim_cmp_as_default = true,
-            nerd_font_variant = 'mono',
+            use_nvim_cmp_as_default = false,
+            nerd_font_variant = 'normal',
         },
 
         sources = {
             default = { 'lsp', 'path', 'buffer' },
-            cmdline = {},
+        },
+
+        cmdline = {
+            enabled = false,
         },
 
         signature = {

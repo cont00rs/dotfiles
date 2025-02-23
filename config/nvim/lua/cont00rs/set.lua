@@ -17,7 +17,7 @@ vim.opt.undofile = true
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.scrolloff = 5
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.cursorlineopt = "line"
 
 -- These seem no longer needed.
