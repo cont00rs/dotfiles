@@ -4,7 +4,7 @@ return {
 
         config = function()
             require("diffview").setup({
-                use_icons = false,
+                use_icons = true,
             })
         end
     }
