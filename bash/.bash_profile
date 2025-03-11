@@ -6,3 +6,4 @@ if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
 fi
 
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
