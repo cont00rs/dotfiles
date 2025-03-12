@@ -3,7 +3,13 @@ local mux = wezterm.mux
 
 local config = {}
 
-config.color_scheme = 'Catppuccin Mocha'
+local colors, _ = wezterm.color.load_base16_scheme("/Users/max/cont00rs/dotfiles/config/wezterm/minicyan.yaml")
+
+config.color_schemes = {
+    ["minicyan"] = colors
+}
+
+config.color_scheme = 'minicyan'
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     -- We are running on Windows.
