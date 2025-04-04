@@ -30,12 +30,6 @@ vim.opt.path:append("**")
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = "*.o,*.swp,*.mod"
 
--- Make trailing whitespaces explicit
--- vim.opt.list = true
--- vim.opt.listchars:append({
---     trail = "·",
--- })
-
 local _ = vim.api.nvim_create_augroup("MyGroup", { clear = false })
 
 -- Jump to old location on file reopen

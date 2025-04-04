@@ -1,17 +1,5 @@
 local keymap = vim.keymap.set
 
--- Colorscheme.
-MiniDeps.now(function()
-    require("mini.base16")
-    vim.cmd("colorscheme minicyan")
-end)
-
--- Completion system.
--- TODO: Make Ctrl-Y hit the auto complete.
-MiniDeps.later(function()
-    require("mini.completion").setup()
-end)
-
 -- Diff support for git gutter highlighting.
 MiniDeps.later(function()
     require("mini.diff").setup({
@@ -34,7 +22,7 @@ MiniDeps.now(function()
         },
     })
 
-    keymap("n", "<leader>bb", function() require("mini.files").open() end)
+    keymap("n", "<leader>bb", function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end)
 end)
 
 -- Icon support
