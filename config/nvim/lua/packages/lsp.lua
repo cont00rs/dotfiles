@@ -1,5 +1,5 @@
 -- LSP
-MiniDeps.later(function()
+MiniDeps.now(function()
     MiniDeps.add({
         source = 'neovim/nvim-lspconfig',
         depends = {
