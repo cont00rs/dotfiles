@@ -29,8 +29,9 @@ config.color_schemes = {
 -- config.color_scheme = 'minicyan'
 -- config.color_scheme = 'minicyan-light'
 -- config.color_scheme = 'tokyonight-storm'
-config.color_scheme = 'tokyonight-night'
+-- config.color_scheme = 'tokyonight-night'
 -- config.color_scheme = 'tokyonight-day'
+config.color_scheme = "Gruvbox dark, hard (base16)"
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     -- We are running on Windows.

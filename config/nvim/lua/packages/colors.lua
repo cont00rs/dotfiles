@@ -1,18 +1,11 @@
 -- Colorscheme.
-MiniDeps.now(function()
+MiniDeps.later(function()
     MiniDeps.add({
-        source = "folke/tokyonight.nvim",
+        source = "sainnhe/gruvbox-material",
     })
 
-    require("tokyonight").setup({
-        styles = {
-            comments = { italic = false },
-            keywords = { italic = false },
-        },
-    })
-
-    -- vim.opt.background = "light"
-    -- vim.cmd("colorscheme tokyonight-day")
     vim.opt.background = "dark"
-    vim.cmd("colorscheme tokyonight-night")
+    vim.g.gruvbox_material_background = "hard"
+    vim.g.gruvbox_material_enable_italic = false
+    vim.cmd("colorscheme gruvbox-material")
 end)
