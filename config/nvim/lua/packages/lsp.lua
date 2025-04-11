@@ -22,6 +22,9 @@ MiniDeps.now(function()
     lspconfig.rust_analyzer.setup({
         settings = {
             ["rust_analyzer"] = {
+                check = {
+                    command = "clippy",
+                },
                 cargo = {
                     allFeatures = true,
                 },
