@@ -1,5 +1,42 @@
 --- Completion system.
-MiniDeps.later(function()
-    vim.opt.completeopt = "menuone,noinsert,fuzzy"
-    require("mini.completion").setup({})
+MiniDeps.now(function()
+    MiniDeps.add({
+        source = "Saghen/blink.cmp",
+        checkout = "v1.1.1",
+    })
+
+    require("blink.cmp").setup({
+        cmdline = {
+            enabled = false,
+        },
+
+        completion = {
+            accept = {
+                auto_brackets = {
+                    enabled = false
+                },
+            },
+            ghost_text = {
+                enabled = false,
+            },
+
+            -- FIXME: How to disable expanding snippets?
+            -- The workaround is to not preselect, move onto the
+            -- match with <C-n> rather than <C-y> and only expand
+            -- the match, not the corresponding snippet.
+            list = {
+                selection = {
+                    preselect = false,
+                },
+            },
+        },
+
+        signature = {
+            enabled = true,
+        },
+
+        sources = {
+            default = { 'lsp', 'path', 'buffer' },
+        }
+    })
 end)
