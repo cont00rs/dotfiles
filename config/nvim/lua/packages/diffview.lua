@@ -4,6 +4,6 @@ MiniDeps.later(function()
     })
 
     require("diffview").setup({
-        use_icons = true,
+        use_icons = false,
     })
 end)
