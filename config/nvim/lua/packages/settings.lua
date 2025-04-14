@@ -30,6 +30,9 @@ vim.opt.path:append("**")
 vim.opt.wildmode = "list:longest"
 vim.opt.wildignore = "*.o,*.swp,*.mod"
 
+vim.opt.diffopt:append('algorithm:histogram')
+vim.opt.diffopt:append('indent-heuristic')
+
 local _ = vim.api.nvim_create_augroup("MyGroup", { clear = false })
 
 -- Jump to old location on file reopen
