@@ -8,7 +8,14 @@ MiniDeps.later(function()
 
     require("nvim-treesitter.configs").setup({
         auto_install = false,
-        ensure_installed = { "c", "lua", "python", "vim", "vimdoc" },
+        ensure_installed = {
+            "c",
+            "lua",
+            "python",
+            "rust",
+            "vim",
+            "vimdoc",
+        },
         highlight = {
             enable = true,
             additional_vim_regex_highlighting = false,
