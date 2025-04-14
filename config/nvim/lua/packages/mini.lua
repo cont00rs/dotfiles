@@ -9,22 +9,6 @@ MiniDeps.later(function()
     })
 end)
 
--- File and directory browser.
--- TODO: Is this better than Oil.nvim?
--- TODO: Should we replace commands like `:Explore`?
-MiniDeps.now(function()
-    require("mini.files").setup({
-        mappings = {
-            close = '<ESC>',
-        },
-        options = {
-            use_as_default_explorer = true,
-        },
-    })
-
-    keymap("n", "<leader>bb", function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end)
-end)
-
 -- Icon support
 MiniDeps.later(function()
     require("mini.icons").setup()
