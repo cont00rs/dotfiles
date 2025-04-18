@@ -99,3 +99,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
         vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", opts)
     end
 })
+
+-- Enable highlight on yank to briefly show selections made.
+-- The autocmd is taken from the `vim.hl.on_yank()` docs.
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+    callback = function()
+        vim.hl.on_yank { higroup = "Visual", timeout = 300 }
+    end
+})
