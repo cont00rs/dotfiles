@@ -133,8 +133,14 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 })
 
 -- Define colorscheme.
+MiniDeps.now(function()
+    MiniDeps.add({
+        source = "folke/tokyonight.nvim"
+    })
+end)
+
 vim.opt.background = "dark"
-vim.cmd.colorscheme("lunaperche")
+vim.cmd.colorscheme("tokyonight-night")
 
 -- Code completion system.
 MiniDeps.now(function()
