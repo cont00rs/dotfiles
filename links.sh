@@ -5,14 +5,22 @@ ln -s $(pwd)/vim/.vimrc ~/.vimrc
 ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.config
-mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/git
-mkdir -p ~/.config/ghostty
+mkdir -p ~/.config/mise
 mkdir -p ~/.config/wezterm
 
-ln -s $(pwd)/config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
-ln -s $(pwd)/config/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
-ln -s $(pwd)/config/ghostty/config ~/.config/ghostty/config
-ln -s $(pwd)/config/git/config ~/.config/git/config
-ln -sv $(pwd)/config/starship.toml  ~/.config/
-ln -s $(pwd)/config/nvim ~/.config/nvim
+ln -sv $(pwd)/config/git/config ~/.config/git/config
+ln -sv $(pwd)/config/mise/config.toml ~/.config/mise/config.toml
+ln -sv $(pwd)/config/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
+
+ln -sv $(pwd)/config/nvim ~/.config/nvim
+
+mkdir -p deps
+
+# Clone/pull fzf-git integration.
+# https://github.com/junegunn/fzf-git.sh
+(
+    cd deps
+    git -C fzf-git pull || git clone https://github.com/junegunn/fzf-git.sh fzf-git
+    cp fzf-git/fzf-git.sh ~/.local/bin/
+)

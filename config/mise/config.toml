@@ -1,0 +1,14 @@
+[settings]
+idiomatic_version_file_enable_tools = []
+experimental = true
+
+[tools]
+eza = "latest"
+fd = "latest"
+fzf = "latest"
+neovim = "latest"
+python = "latest"
+ripgrep = "latest"
+tmux = "latest"
+uv = "latest"
+
