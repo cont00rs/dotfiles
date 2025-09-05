@@ -1,60 +1,75 @@
 local wezterm = require 'wezterm'
-local mux = wezterm.mux
 
 local config = {}
 
-local minicyan_dark, _ = wezterm.color.load_base16_scheme(
-    "/Users/max/cont00rs/dotfiles/config/wezterm/minicyan.yaml")
-
-local minicyan_light, _ = wezterm.color.load_base16_scheme(
-    "/Users/max/cont00rs/dotfiles/config/wezterm/minicyan-light.yaml")
-
-local tokyonight_storm, _ = wezterm.color.load_scheme(
-    "/Users/max/cont00rs/dotfiles/config/wezterm/tokyonight_storm.toml")
-
-local tokyonight_night, _ = wezterm.color.load_scheme(
-    "/Users/max/cont00rs/dotfiles/config/wezterm/tokyonight_night.toml")
-
-local tokyonight_day, _ = wezterm.color.load_scheme(
-    "/Users/max/cont00rs/dotfiles/config/wezterm/tokyonight_day.toml")
-
 config.color_schemes = {
-    ["minicyan"] = minicyan_dark,
-    ["minicyan-light"] = minicyan_light,
-    ["tokyostorm-storm"] = tokyonight_storm,
-    ["tokyonight-night"] = tokyonight_night,
-    ["tokyonight-day"] = tokyonight_day,
-    ["gruvbox_material_dark_hard"] = {
-        foreground = "#D4BE98",
-        background = "#1D2021",
-        cursor_bg = "#D4BE98",
-        cursor_border = "#D4BE98",
-        cursor_fg = "#1D2021",
-        selection_bg = "#D4BE98",
-        selection_fg = "#3C3836",
+    -- Derived through vibing from the (neo)vim lunaperche colorscheme.
+    ["lunaperche"] = {
+        foreground = "#c6c6c6",
+        background = "#000000",
+        cursor_bg = "#c6c6c6",
+        cursor_fg = "#000000",
+        cursor_border = "#c6c6c6",
+        selection_fg = "#000000",
+        selection_bg = "#5fafff",
+        scrollbar_thumb = "#767676",
+        split = "#767676",
 
         ansi = {
-            "#1d2021", "#ea6962", "#a9b665", "#d8a657",
-            "#7daea3", "#d3869b", "#89b482", "#d4be98",
+            "#000000", -- black
+            "#ff5f5f", -- bright red
+            "#5fd75f", -- bright green
+            "#ffd787", -- bright yellow
+            "#5fafff", -- bright blue
+            "#ff87ff", -- bright magenta
+            "#5fd7d7", -- bright cyan
+            "#c6c6c6", -- white
         },
+
         brights = {
-            "#eddeb5", "#ea6962", "#a9b665", "#d8a657",
-            "#7daea3", "#d3869b", "#89b482", "#d4be98",
+            "#767676", -- bright black
+            "#ff5f5f", -- bright red
+            "#5fd75f", -- bright green
+            "#ffd787", -- bright yellow
+            "#5fafff", -- bright blue
+            "#ff87ff", -- bright magenta
+            "#5fd7d7", -- bright cyan
+            "#ffffff", -- bright white
         },
-    },
+
+        tab_bar = {
+            background = "#000000",
+            active_tab = {
+                bg_color = "#c6c6c6",
+                fg_color = "#000000",
+                intensity = "Bold",
+            },
+            inactive_tab = {
+                bg_color = "#767676",
+                fg_color = "#000000",
+            },
+            inactive_tab_hover = {
+                bg_color = "#4e4e4e",
+                fg_color = "#000000",
+                italic = true,
+            },
+            new_tab = {
+                bg_color = "#000000",
+                fg_color = "#5fafff",
+            },
+            new_tab_hover = {
+                bg_color = "#4e4e4e",
+                fg_color = "#5fafff",
+                italic = true,
+            },
+        },
+    }
 }
 
--- config.color_scheme = 'minicyan'
--- config.color_scheme = 'minicyan-light'
--- config.color_scheme = 'tokyonight-storm'
--- config.color_scheme = 'tokyonight-night'
--- config.color_scheme = 'tokyonight-day'
--- config.color_scheme = "gruvbox_material_dark_hard"
--- config.color_scheme = "Gruvbox dark, hard (base16)"
-config.color_scheme = "Sonokai (Gogh)"
+config.color_scheme = "lunaperche"
 
+-- On Windows run Ubuntu through WSL.
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-    -- We are running on Windows.
     config.default_domain = 'WSL:Ubuntu'
 end
 
@@ -64,5 +79,12 @@ config.font = wezterm.font {
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
 config.font_size = 14
+
+-- To maximize the window on startup.
+-- local mux = wezterm.mux
+-- wezterm.on("gui-startup", function()
+--     local _, _, window = mux.spawn_window {}
+--     window:gui_window():maximize()
+-- end)
 
 return config
