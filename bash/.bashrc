@@ -19,6 +19,9 @@ export PROMPT_DIRTRIM=2
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\u@\h \w$(__git_ps1 " (%s)") \[\e[0;$(($?==0?0:91))m\]$ \[\e[0m\]'
 
+# Use starship for prompting
+eval "$(starship init bash)"
+
 # Alias commands
 if command -v eza &>/dev/null
 then

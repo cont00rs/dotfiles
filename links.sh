@@ -12,6 +12,7 @@ mkdir -p ~/.config/wezterm
 ln -sv $(pwd)/config/git/config ~/.config/git/config
 ln -sv $(pwd)/config/mise/config.toml ~/.config/mise/config.toml
 ln -sv $(pwd)/config/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
+ln -sv $(pwd)/config/starship/starship.toml ~/.config/starship.toml
 
 [ -d ~/.config/nvim ] || ln -sv $(pwd)/config/nvim ~/.config/nvim
 
