@@ -4,7 +4,7 @@ MiniDeps.now(function()
     })
 
     vim.keymap.set("n", "<leader>fb", function() Snacks.picker.buffers() end)
-    vim.keymap.set("n", "<leader>ff", function() Snacks.picker.files({ hidden = true, ignored = true }) end)
+    vim.keymap.set("n", "<leader>ff", function() Snacks.picker.files({ hidden = false, ignored = false }) end)
     vim.keymap.set("n", "<leader>gd", function() Snacks.picker.git_diff() end)
     vim.keymap.set("n", "<leader>gs", function() Snacks.picker.git_status() end)
     vim.keymap.set("n", "<leader>sg", function() Snacks.picker.grep() end)

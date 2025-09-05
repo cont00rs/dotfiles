@@ -50,7 +50,8 @@ config.color_schemes = {
 -- config.color_scheme = 'tokyonight-night'
 -- config.color_scheme = 'tokyonight-day'
 -- config.color_scheme = "gruvbox_material_dark_hard"
-config.color_scheme = "Gruvbox dark, hard (base16)"
+-- config.color_scheme = "Gruvbox dark, hard (base16)"
+config.color_scheme = "Sonokai (Gogh)"
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     -- We are running on Windows.
