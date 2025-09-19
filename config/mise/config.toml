@@ -3,12 +3,14 @@ idiomatic_version_file_enable_tools = []
 experimental = true
 
 [tools]
-eza = "latest"
-fd = "latest"
-fzf = "latest"
-neovim = "latest"
-python = "latest"
-ripgrep = "latest"
-tmux = "latest"
-uv = "latest"
+"cargo:eza" = "0.23.3"
+"cargo:fd-find" = "10.3.0"
+"go:github.com/junegunn/fzf" = "0.65.2"
+neovim = "0.11.4"
+python = "3.13.7"
+"cargo:ripgrep" = "14.1.1"
+rust = "1.90.0"
+tmux = "3.5a"
+uv = "0.8.18"
+go = "1.25.1"
 
