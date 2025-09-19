@@ -125,7 +125,7 @@ config.color_schemes = {
     },
 }
 
-config.color_scheme = "tokyonight-night"
+config.color_scheme = "Gruvbox dark, hard (base16)"
 
 -- On Windows run Ubuntu through WSL.
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then

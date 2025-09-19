@@ -135,18 +135,33 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 -- Define colorscheme.
 MiniDeps.now(function()
     MiniDeps.add({
-        source = "folke/tokyonight.nvim"
+        source = "ellisonleao/gruvbox.nvim"
+    })
+
+    require("gruvbox").setup({
+        italic = {
+            strings = false,
+            emphasis = false,
+            comments = false,
+        },
+        contrast = "hard",
+        overrides = {
+            -- Ensure comments stand out a bit more.
+            Comment = { fg = "#ff9900" },
+            -- Ensure DiffText does not overlap with search highlight.
+            DiffText = { bg = "#b57614" },
+        }
     })
 end)
 
 vim.opt.background = "dark"
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("gruvbox")
 
 -- Code completion system.
 MiniDeps.now(function()
     MiniDeps.add({
         source = "Saghen/blink.cmp",
-        checkout = "v1.6.0",
+        checkout = "v1.7.0",
     })
 
     require("blink.cmp").setup({
@@ -258,9 +273,9 @@ MiniDeps.now(function()
         automatic_enable = true,
     })
 
-    local lspconfig = require("lspconfig")
+    vim.lsp.enable('rust_analyzer')
 
-    lspconfig.rust_analyzer.setup({
+    vim.lsp.config('rust_analyzer', {
         settings = {
             ["rust-analyzer"] = {
                 cargo = {
@@ -275,7 +290,7 @@ MiniDeps.now(function()
         },
     })
 
-    lspconfig.lua_ls.setup({
+    vim.lsp.config('lua_ls', {
         settings = {
             Lua = {
                 diagnostics = {
