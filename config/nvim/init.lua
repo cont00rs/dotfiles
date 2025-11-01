@@ -150,6 +150,7 @@ MiniDeps.now(function()
             Comment = { fg = "#ff9900" },
             -- Ensure DiffText does not overlap with search highlight.
             DiffText = { bg = "#b57614" },
+            SignColumn = { link = "LineNr" },
         }
     })
 end)
@@ -211,6 +212,7 @@ MiniDeps.later(function()
             rust = { "rustfmt", lsp_format = "fallback" },
             python = { "ruff_format" },
             markdown = { "mdformat" },
+            gleam = { "gleam" },
         },
         format_on_save = {
             lsp_format = "fallback",
@@ -274,6 +276,9 @@ MiniDeps.now(function()
     })
 
     vim.lsp.enable('rust_analyzer')
+
+    vim.lsp.enable('gleam')
+    vim.lsp.enable('zls')
 
     vim.lsp.config('rust_analyzer', {
         settings = {
